@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./chatbot-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - FRONTEND_URL=http://localhost:3000
+    env_file:
+      - ./chatbot-backend/.env
+
+  frontend:
+    build: ./chatbot-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
