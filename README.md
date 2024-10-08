@@ -1,35 +1,106 @@
-# Chatbot Project
+# Chatbot Application
 
-This project aims to develop a comprehensive chatbot system that integrates both frontend and backend technologies to provide a seamless user experience.
+This project is a full-stack chatbot application with a Node.js Express backend and a React frontend.
 
-## Frontend
+## Project Structure
 
-The frontend of the chatbot is built using modern web technologies such as HTML, CSS, and JavaScript. It utilizes popular libraries and frameworks like React or Angular to create a responsive and user-friendly interface. The frontend is responsible for handling user input, displaying chatbot responses, and managing the overall user interface.
+```
+chatbot-application/
+├── chatbot-backend/     # Backend Node.js Express application
+├── chatbot-frontend/    # Frontend React application
+└── docker-compose.yml   # Docker Compose configuration
+```
 
-## Backend
+## Prerequisites
 
-The backend of the chatbot is built using a robust programming language like Node.js or Python. It leverages popular frameworks like Express.js or Django to handle incoming requests, process user input, and generate responses. The backend is responsible for integrating with natural language processing (NLP) services, managing user sessions, and storing chatbot data.
+- Node.js (v14 or later)
+- npm or Yarn
+- Docker and Docker Compose (for containerized deployment)
 
-## Technologies Used
+## Getting Started
 
-- Frontend: HTML, CSS, JavaScript, React or Angular
-- Backend: Node.js or Python, Express.js or Django
-- NLP Services: Dialogflow, IBM Watson, or Microsoft Bot Framework
+### Backend Setup
 
-## Features
+1. Navigate to the backend directory:
 
-- User-friendly interface for easy conversation
-- Integration with NLP services for intelligent responses
-- Session management for personalized conversations
-- Data storage for chatbot analytics and improvement
+   ```
+   cd chatbot-backend
+   ```
 
-## Development Roadmap
+2. Install dependencies:
 
-- Frontend development: 1 days
-- Backend development: 1 days
-- Integration and testing: 2 weeks
-- Deployment and maintenance: Ongoing
+   ```
+   npm install
+   ```
+
+3. Create a `.env` file in the `chatbot-backend` directory and add your OpenAI API key:
+
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   PORT=3001
+   ```
+
+4. Start the backend server:
+   ```
+   npm run dev
+   ```
+
+The backend will be available at `http://localhost:3001`.
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+
+   ```
+   cd chatbot-frontend
+   ```
+
+2. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+3. Start the frontend development server:
+   ```
+   npm start
+   ```
+
+The frontend will be available at `http://localhost:3000`.
+
+## Docker Deployment
+
+To run the entire application using Docker:
+
+1. Ensure you have Docker and Docker Compose installed.
+
+2. From the root directory, run:
+   ```
+   docker-compose up --build
+   ```
+
+This will build and start both the backend and frontend containers.
+
+## Usage
+
+Once both the backend and frontend are running:
+
+1. Open your browser and go to `http://localhost:3000`.
+2. You'll see the chat interface where you can interact with the chatbot.
+3. Type your message and press enter or click the send button.
+4. The chatbot will respond based on the input provided.
+
+## Development
+
+- Backend code is located in `chatbot-backend/src/`
+- Frontend code is located in `chatbot-frontend/src/`
+
+Make sure to update the README as you add new features or change the project structure.
 
 ## Contributing
 
-Contributions to this project are welcome. If you're interested in contributing, please fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. KhanhDev
