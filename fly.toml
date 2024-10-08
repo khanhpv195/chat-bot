@@ -1,4 +1,4 @@
-app = "Chat bot"
+app = "chatbot-app"
 
 [build]
   dockerfile = "Dockerfile"
